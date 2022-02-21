@@ -12,7 +12,7 @@ function Gallery() {
         <div className="col-md-4">
             <div className="row">
                 <div className="col-12">
-                    <img className="img-fluid rounded" src={image} alt="cat" ></img>
+                    <img className="img-fluid rounded" src={image} alt="cat" />
                 </div>
             </div>
             <div className="row mt-3">
