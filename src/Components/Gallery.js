@@ -3,24 +3,10 @@ import { useState } from "react"
 function Gallery() {
 
     const [image, setImage] = useState('/images/gato2.jpg')
-    const showImage2 = () => {
-        setImage('/images/gato2.jpg')
+    const showImage = (image) => {
+        setImage(image)
     }
-    const showImage3 = () => {
-        setImage('/images/gato3.jpg')
-    }
-    const showImage5 = () => {
-        setImage('/images/gato5.jpg')
-    }
-    const showImage6 = () => {
-        setImage('/images/gato6.jpg')
-    }
-    const showImage7 = () => {
-        setImage('/images/gato1.jpg')
-    }
-    const showImage8 = () => {
-        setImage('/images/gato8.jpg')
-    }
+
 
     return(
         <div className="col-md-4">
@@ -31,24 +17,24 @@ function Gallery() {
             </div>
             <div className="row mt-3">
                 <div className="col-md-4">
-                    <img className="img-fluid rounded" src="/images/gato2.jpg" alt="cat" onMouseEnter={showImage2}></img>
+                    <img className="img-fluid rounded" src="/images/gato2.jpg" alt="cat" onMouseEnter={() => showImage('/images/gato2.jpg')}></img>
                 </div>
                 <div className="col-md-4">
-                    <img className="img-fluid rounded" src="/images/gato3.jpg" alt="cat" onMouseEnter={showImage3}></img>
+                    <img className="img-fluid rounded" src="/images/gato3.jpg" alt="cat" onMouseEnter={showImage}></img>
                 </div>
                 <div className="col-md-4">
-                    <img className="img-fluid rounded" src="/images/gato5.jpg" alt="cat" onMouseEnter={showImage5}></img>
+                    <img className="img-fluid rounded" src="/images/gato5.jpg" alt="cat" onMouseEnter={showImage}></img>
                 </div>
             </div>
             <div className="row mt-3">
                 <div className="col-md-4">
-                    <img className="img-fluid rounded" src="/images/gato6.jpg" alt="cat" onMouseEnter={showImage6}></img>
+                    <img className="img-fluid rounded" src="/images/gato6.jpg" alt="cat" onMouseEnter={showImage}></img>
                 </div>
                 <div className="col-md-4">
-                    <img className="img-fluid rounded" src="/images/gato1.jpg" alt="cat" onMouseEnter={showImage7}></img>
+                    <img className="img-fluid rounded" src="/images/gato1.jpg" alt="cat" onMouseEnter={showImage}></img>
                 </div>
                 <div className="col-md-4">
-                    <img className="img-fluid rounded" src="/images/gato8.jpg" alt="cat" onMouseEnter={showImage8}></img>
+                    <img className="img-fluid rounded" src="/images/gato8.jpg" alt="cat" onMouseEnter={showImage}></img>
                 </div>
             </div>
         </div>
