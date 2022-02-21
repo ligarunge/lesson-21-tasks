@@ -7,7 +7,7 @@ function Badges() {
     'girl', 'boy', 'sunset', 'butterfly', 'cold', 'winter', 'sea', 'ski' ]
     const [input, setInput] = useState('')
     const inputList = input.split(' ')
-    let content = ''
+    const content = inputList.join(', ')
     const highlightMatch = (event) => {
         setInput(event.target.value)
     }
@@ -16,7 +16,6 @@ function Badges() {
         if (inputList.includes(badge)) {
             badgeClass = 'badge rounded-pill bg-success m-1'
         }
-        content = inputList.join(', ')
         return (
          <span class={badgeClass} key={index}>{badge}</span>
         )
