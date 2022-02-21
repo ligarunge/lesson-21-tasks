@@ -2,6 +2,10 @@ import Card from "../Components/Card"
 import cards from "../Data/cards";
 
 function Home() {
+    const cardsList = cards.map((card, index) => {
+        return <Card key={index} title={card.title} price={card.price} features={card.features} button={card.button}/> 
+    })
+    
     return (
         <div className="container">
             <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
