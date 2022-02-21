@@ -8,9 +8,8 @@ function Badges() {
     const [input, setInput] = useState('')
     const inputList = input.split(' ')
     const content = inputList.join(', ')
-    const highlightMatch = (event) => {
-        setInput(event.target.value)
-    }
+
+    
     const badgesList = badges.map ((badge, index) => {
         let badgeClass = 'badge rounded-pill bg-secondary m-1'
         if (inputList.includes(badge)) {
@@ -24,13 +23,13 @@ function Badges() {
     return (
         <div className="container" style={{minHeight: '40rem'}}>
             <div className="row mt-5">
-            <h5 className="display-4">Looking for tags: {content}</h5>
+                <h5 className="display-4">Looking for tags: {content}</h5>
             </div>
             <div className="row mt-2">
-            <input onChange={highlightMatch} value={input}></input>
+                <input onChange={(event) => setInput(event.target.value)} value={input}/>
             </div>
             <div className="row mt-2">
-            {badgesList}
+                {badgesList}
             </div>  
         </div>
     )
