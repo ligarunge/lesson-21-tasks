@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom"
+
 function Header() {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="">Catland</a>
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="/pictures">Pictures</a>
-                    <a class="nav-item nav-link" href="/words">Words</a>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <Link className="navbar-brand" to="/">Catland</Link>
+                <div className="navbar-nav">
+                    <Link className="nav-item nav-link active" to="/">Home</Link>
+                    <Link className="nav-item nav-link" to="/pictures">Pictures</Link>
+                    <Link className="nav-item nav-link" to="/words">Words</Link>
                 </div>
             </nav>
         </div>

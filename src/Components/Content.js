@@ -5,12 +5,14 @@ import Pictures from "../Pages/Pictures";
 import Words from "../Pages/Words";
 
 function Content() {
-    return <div>
-        <Routes>
-            <Route path="/" element={<Home />}/>
-            <Route path="/words" element={<Words />}/>
-            <Route path="/pictures" element={<Pictures />}/>
-        </Routes>
-    </div>
+    return (
+        <div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/words" element={<Words />} />
+                <Route path="/pictures" element={<Pictures />} />
+            </Routes>
+        </div>
+    )
 }
 export default Content
